@@ -2,8 +2,9 @@ package com.katien.bookstore.controller;
 
 import com.katien.bookstore.bean.BookEJB;
 import com.katien.bookstore.entity.Book;
+import java.io.Serializable;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -15,7 +16,7 @@ import javax.inject.Named;
 
 @Named
 @RequestScoped
-public class BookController {
+public class BookController implements Serializable {
     
     @Inject
     private BookEJB bookEJB;
